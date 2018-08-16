@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13CB50FD2125E8B6003AD727 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CB50FC2125E8B6003AD727 /* AppDelegate.m */; };
-		13CB51002125E8B6003AD727 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CB50FF2125E8B6003AD727 /* ViewController.m */; };
-		13CB51032125E8B6003AD727 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CB51012125E8B6003AD727 /* Main.storyboard */; };
+		13CB50FD2125E8B6003AD727 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13CB50FC2125E8B6003AD727 /* AppDelegate.mm */; };
+		13CB51002125E8B6003AD727 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13CB50FF2125E8B6003AD727 /* ViewController.mm */; };
 		13CB51052125E8B8003AD727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CB51042125E8B8003AD727 /* Assets.xcassets */; };
 		13CB51082125E8B8003AD727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CB51062125E8B8003AD727 /* LaunchScreen.storyboard */; };
 		13CB510B2125E8B8003AD727 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CB510A2125E8B8003AD727 /* main.m */; };
@@ -51,15 +50,16 @@
 		13CB51B22125EAB5003AD727 /* CubismRenderer_OpenGLES2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51862125EAB4003AD727 /* CubismRenderer_OpenGLES2.cpp */; };
 		13CB51B32125EAB5003AD727 /* csmString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB518C2125EAB4003AD727 /* csmString.cpp */; };
 		13CB51B42125EAB5003AD727 /* csmRectF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB518E2125EAB4003AD727 /* csmRectF.cpp */; };
+		13CB51B72125ED35003AD727 /* LAppAllocator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51B62125ED35003AD727 /* LAppAllocator.mm */; };
+		13CB51BA2125EE9E003AD727 /* LAppPal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51B92125EE9E003AD727 /* LAppPal.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13CB50F82125E8B6003AD727 /* Cubism3-ARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cubism3-ARKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CB50FB2125E8B6003AD727 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		13CB50FC2125E8B6003AD727 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		13CB50FC2125E8B6003AD727 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		13CB50FE2125E8B6003AD727 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		13CB50FF2125E8B6003AD727 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		13CB51022125E8B6003AD727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		13CB50FF2125E8B6003AD727 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		13CB51042125E8B8003AD727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13CB51072125E8B8003AD727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13CB51092125E8B8003AD727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -146,6 +146,10 @@
 		13CB518F2125EAB4003AD727 /* csmMap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = csmMap.hpp; sourceTree = "<group>"; };
 		13CB51902125EAB4003AD727 /* ICubismModelSetting.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ICubismModelSetting.hpp; path = Framework/src/ICubismModelSetting.hpp; sourceTree = "<group>"; };
 		13CB51912125EAB4003AD727 /* CubismDefaultParameterId.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CubismDefaultParameterId.hpp; path = Framework/src/CubismDefaultParameterId.hpp; sourceTree = "<group>"; };
+		13CB51B52125ED35003AD727 /* LAppAllocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAppAllocator.h; sourceTree = "<group>"; };
+		13CB51B62125ED35003AD727 /* LAppAllocator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAppAllocator.mm; sourceTree = "<group>"; };
+		13CB51B82125EE9E003AD727 /* LAppPal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAppPal.h; sourceTree = "<group>"; };
+		13CB51B92125EE9E003AD727 /* LAppPal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAppPal.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,10 +188,13 @@
 			isa = PBXGroup;
 			children = (
 				13CB50FB2125E8B6003AD727 /* AppDelegate.h */,
-				13CB50FC2125E8B6003AD727 /* AppDelegate.m */,
+				13CB50FC2125E8B6003AD727 /* AppDelegate.mm */,
 				13CB50FE2125E8B6003AD727 /* ViewController.h */,
-				13CB50FF2125E8B6003AD727 /* ViewController.m */,
-				13CB51012125E8B6003AD727 /* Main.storyboard */,
+				13CB50FF2125E8B6003AD727 /* ViewController.mm */,
+				13CB51B52125ED35003AD727 /* LAppAllocator.h */,
+				13CB51B62125ED35003AD727 /* LAppAllocator.mm */,
+				13CB51B82125EE9E003AD727 /* LAppPal.h */,
+				13CB51B92125EE9E003AD727 /* LAppPal.mm */,
 				13CB51042125E8B8003AD727 /* Assets.xcassets */,
 				13CB51062125E8B8003AD727 /* LaunchScreen.storyboard */,
 				13CB51092125E8B8003AD727 /* Info.plist */,
@@ -440,7 +447,6 @@
 			files = (
 				13CB51082125E8B8003AD727 /* LaunchScreen.storyboard in Resources */,
 				13CB51052125E8B8003AD727 /* Assets.xcassets in Resources */,
-				13CB51032125E8B6003AD727 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +461,7 @@
 				13CB51A92125EAB5003AD727 /* CubismModelUserData.cpp in Sources */,
 				13CB51952125EAB5003AD727 /* CubismTargetPoint.cpp in Sources */,
 				13CB519C2125EAB5003AD727 /* CubismExpressionMotion.cpp in Sources */,
-				13CB51002125E8B6003AD727 /* ViewController.m in Sources */,
+				13CB51002125E8B6003AD727 /* ViewController.mm in Sources */,
 				13CB510B2125E8B8003AD727 /* main.m in Sources */,
 				13CB51AB2125EAB5003AD727 /* CubismUserModel.cpp in Sources */,
 				13CB519A2125EAB5003AD727 /* CubismMotionManager.cpp in Sources */,
@@ -474,11 +480,13 @@
 				13CB51AD2125EAB5003AD727 /* CubismModel.cpp in Sources */,
 				13CB51B22125EAB5003AD727 /* CubismRenderer_OpenGLES2.cpp in Sources */,
 				13CB51A82125EAB5003AD727 /* CubismFramework.cpp in Sources */,
+				13CB51B72125ED35003AD727 /* LAppAllocator.mm in Sources */,
 				13CB51AC2125EAB5003AD727 /* CubismMoc.cpp in Sources */,
 				13CB51A02125EAB5003AD727 /* CubismString.cpp in Sources */,
 				13CB51992125EAB5003AD727 /* CubismMotion.cpp in Sources */,
 				13CB51AA2125EAB5003AD727 /* CubismModelUserDataJson.cpp in Sources */,
-				13CB50FD2125E8B6003AD727 /* AppDelegate.m in Sources */,
+				13CB51BA2125EE9E003AD727 /* LAppPal.mm in Sources */,
+				13CB50FD2125E8B6003AD727 /* AppDelegate.mm in Sources */,
 				13CB51AF2125EAB5003AD727 /* CubismId.cpp in Sources */,
 				13CB51A12125EAB5003AD727 /* CubismDebug.cpp in Sources */,
 				13CB51A32125EAB5003AD727 /* CubismPhysics.cpp in Sources */,
@@ -495,14 +503,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		13CB51012125E8B6003AD727 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13CB51022125E8B6003AD727 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		13CB51062125E8B8003AD727 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
