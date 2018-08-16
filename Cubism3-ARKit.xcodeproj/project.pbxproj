@@ -13,6 +13,44 @@
 		13CB51052125E8B8003AD727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CB51042125E8B8003AD727 /* Assets.xcassets */; };
 		13CB51082125E8B8003AD727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CB51062125E8B8003AD727 /* LaunchScreen.storyboard */; };
 		13CB510B2125E8B8003AD727 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CB510A2125E8B8003AD727 /* main.m */; };
+		13CB51332125E9DE003AD727 /* libLive2DCubismCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CB51322125E9DE003AD727 /* libLive2DCubismCore.a */; };
+		13CB51352125E9E5003AD727 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CB51342125E9E5003AD727 /* GLKit.framework */; };
+		13CB51372125E9EA003AD727 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CB51362125E9EA003AD727 /* OpenGLES.framework */; };
+		13CB51922125EAB5003AD727 /* CubismModelMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB513C2125EAB3003AD727 /* CubismModelMatrix.cpp */; };
+		13CB51932125EAB5003AD727 /* CubismViewMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB513D2125EAB3003AD727 /* CubismViewMatrix.cpp */; };
+		13CB51942125EAB5003AD727 /* CubismVector2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB513F2125EAB3003AD727 /* CubismVector2.cpp */; };
+		13CB51952125EAB5003AD727 /* CubismTargetPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51402125EAB3003AD727 /* CubismTargetPoint.cpp */; };
+		13CB51962125EAB5003AD727 /* CubismMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51422125EAB3003AD727 /* CubismMath.cpp */; };
+		13CB51972125EAB5003AD727 /* CubismMatrix44.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51452125EAB3003AD727 /* CubismMatrix44.cpp */; };
+		13CB51982125EAB5003AD727 /* ACubismMotion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB514C2125EAB3003AD727 /* ACubismMotion.cpp */; };
+		13CB51992125EAB5003AD727 /* CubismMotion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB514D2125EAB3003AD727 /* CubismMotion.cpp */; };
+		13CB519A2125EAB5003AD727 /* CubismMotionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB514E2125EAB3003AD727 /* CubismMotionManager.cpp */; };
+		13CB519B2125EAB5003AD727 /* CubismMotionQueueManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51512125EAB3003AD727 /* CubismMotionQueueManager.cpp */; };
+		13CB519C2125EAB5003AD727 /* CubismExpressionMotion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51562125EAB3003AD727 /* CubismExpressionMotion.cpp */; };
+		13CB519D2125EAB5003AD727 /* CubismMotionJson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51572125EAB3003AD727 /* CubismMotionJson.cpp */; };
+		13CB519E2125EAB5003AD727 /* CubismMotionQueueEntry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51582125EAB3003AD727 /* CubismMotionQueueEntry.cpp */; };
+		13CB519F2125EAB5003AD727 /* CubismJson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB515A2125EAB3003AD727 /* CubismJson.cpp */; };
+		13CB51A02125EAB5003AD727 /* CubismString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB515B2125EAB3003AD727 /* CubismString.cpp */; };
+		13CB51A12125EAB5003AD727 /* CubismDebug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB515E2125EAB3003AD727 /* CubismDebug.cpp */; };
+		13CB51A22125EAB5003AD727 /* CubismPhysicsJson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51642125EAB4003AD727 /* CubismPhysicsJson.cpp */; };
+		13CB51A32125EAB5003AD727 /* CubismPhysics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51652125EAB4003AD727 /* CubismPhysics.cpp */; };
+		13CB51A42125EAB5003AD727 /* CubismPose.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51682125EAB4003AD727 /* CubismPose.cpp */; };
+		13CB51A52125EAB5003AD727 /* CubismEyeBlink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51692125EAB4003AD727 /* CubismEyeBlink.cpp */; };
+		13CB51A62125EAB5003AD727 /* CubismBreath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB516A2125EAB4003AD727 /* CubismBreath.cpp */; };
+		13CB51A72125EAB5003AD727 /* CubismDefaultParameterId.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB516E2125EAB4003AD727 /* CubismDefaultParameterId.cpp */; };
+		13CB51A82125EAB5003AD727 /* CubismFramework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB516F2125EAB4003AD727 /* CubismFramework.cpp */; };
+		13CB51A92125EAB5003AD727 /* CubismModelUserData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51712125EAB4003AD727 /* CubismModelUserData.cpp */; };
+		13CB51AA2125EAB5003AD727 /* CubismModelUserDataJson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51722125EAB4003AD727 /* CubismModelUserDataJson.cpp */; };
+		13CB51AB2125EAB5003AD727 /* CubismUserModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51732125EAB4003AD727 /* CubismUserModel.cpp */; };
+		13CB51AC2125EAB5003AD727 /* CubismMoc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51742125EAB4003AD727 /* CubismMoc.cpp */; };
+		13CB51AD2125EAB5003AD727 /* CubismModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51782125EAB4003AD727 /* CubismModel.cpp */; };
+		13CB51AE2125EAB5003AD727 /* CubismIdManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB517F2125EAB4003AD727 /* CubismIdManager.cpp */; };
+		13CB51AF2125EAB5003AD727 /* CubismId.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51802125EAB4003AD727 /* CubismId.cpp */; };
+		13CB51B02125EAB5003AD727 /* CubismModelSettingJson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51812125EAB4003AD727 /* CubismModelSettingJson.cpp */; };
+		13CB51B12125EAB5003AD727 /* CubismRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51842125EAB4003AD727 /* CubismRenderer.cpp */; };
+		13CB51B22125EAB5003AD727 /* CubismRenderer_OpenGLES2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51862125EAB4003AD727 /* CubismRenderer_OpenGLES2.cpp */; };
+		13CB51B32125EAB5003AD727 /* csmString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB518C2125EAB4003AD727 /* csmString.cpp */; };
+		13CB51B42125EAB5003AD727 /* csmRectF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB518E2125EAB4003AD727 /* csmRectF.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +64,88 @@
 		13CB51072125E8B8003AD727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13CB51092125E8B8003AD727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13CB510A2125E8B8003AD727 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		13CB51322125E9DE003AD727 /* libLive2DCubismCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLive2DCubismCore.a; path = "Core/lib/ios/Debug-iphoneos/libLive2DCubismCore.a"; sourceTree = "<group>"; };
+		13CB51342125E9E5003AD727 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		13CB51362125E9EA003AD727 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		13CB51392125EAB3003AD727 /* CubismModelSettingJson.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CubismModelSettingJson.hpp; path = Framework/src/CubismModelSettingJson.hpp; sourceTree = "<group>"; };
+		13CB513A2125EAB3003AD727 /* ICubismAllocator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ICubismAllocator.hpp; path = Framework/src/ICubismAllocator.hpp; sourceTree = "<group>"; };
+		13CB513C2125EAB3003AD727 /* CubismModelMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismModelMatrix.cpp; sourceTree = "<group>"; };
+		13CB513D2125EAB3003AD727 /* CubismViewMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismViewMatrix.cpp; sourceTree = "<group>"; };
+		13CB513E2125EAB3003AD727 /* CubismMath.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismMath.hpp; sourceTree = "<group>"; };
+		13CB513F2125EAB3003AD727 /* CubismVector2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismVector2.cpp; sourceTree = "<group>"; };
+		13CB51402125EAB3003AD727 /* CubismTargetPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismTargetPoint.cpp; sourceTree = "<group>"; };
+		13CB51412125EAB3003AD727 /* CubismMatrix44.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismMatrix44.hpp; sourceTree = "<group>"; };
+		13CB51422125EAB3003AD727 /* CubismMath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismMath.cpp; sourceTree = "<group>"; };
+		13CB51432125EAB3003AD727 /* CubismTargetPoint.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismTargetPoint.hpp; sourceTree = "<group>"; };
+		13CB51442125EAB3003AD727 /* CubismVector2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismVector2.hpp; sourceTree = "<group>"; };
+		13CB51452125EAB3003AD727 /* CubismMatrix44.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismMatrix44.cpp; sourceTree = "<group>"; };
+		13CB51462125EAB3003AD727 /* CubismModelMatrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismModelMatrix.hpp; sourceTree = "<group>"; };
+		13CB51472125EAB3003AD727 /* CubismViewMatrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismViewMatrix.hpp; sourceTree = "<group>"; };
+		13CB51482125EAB3003AD727 /* CubismFrameworkConfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CubismFrameworkConfig.hpp; path = Framework/src/CubismFrameworkConfig.hpp; sourceTree = "<group>"; };
+		13CB514A2125EAB3003AD727 /* CubismMotionQueueEntry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismMotionQueueEntry.hpp; sourceTree = "<group>"; };
+		13CB514B2125EAB3003AD727 /* CubismMotionQueueManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismMotionQueueManager.hpp; sourceTree = "<group>"; };
+		13CB514C2125EAB3003AD727 /* ACubismMotion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ACubismMotion.cpp; sourceTree = "<group>"; };
+		13CB514D2125EAB3003AD727 /* CubismMotion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismMotion.cpp; sourceTree = "<group>"; };
+		13CB514E2125EAB3003AD727 /* CubismMotionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismMotionManager.cpp; sourceTree = "<group>"; };
+		13CB514F2125EAB3003AD727 /* CubismExpressionMotion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismExpressionMotion.hpp; sourceTree = "<group>"; };
+		13CB51502125EAB3003AD727 /* CubismMotionJson.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismMotionJson.hpp; sourceTree = "<group>"; };
+		13CB51512125EAB3003AD727 /* CubismMotionQueueManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismMotionQueueManager.cpp; sourceTree = "<group>"; };
+		13CB51522125EAB3003AD727 /* CubismMotion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismMotion.hpp; sourceTree = "<group>"; };
+		13CB51532125EAB3003AD727 /* ACubismMotion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ACubismMotion.hpp; sourceTree = "<group>"; };
+		13CB51542125EAB3003AD727 /* CubismMotionInternal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismMotionInternal.hpp; sourceTree = "<group>"; };
+		13CB51552125EAB3003AD727 /* CubismMotionManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismMotionManager.hpp; sourceTree = "<group>"; };
+		13CB51562125EAB3003AD727 /* CubismExpressionMotion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismExpressionMotion.cpp; sourceTree = "<group>"; };
+		13CB51572125EAB3003AD727 /* CubismMotionJson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismMotionJson.cpp; sourceTree = "<group>"; };
+		13CB51582125EAB3003AD727 /* CubismMotionQueueEntry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismMotionQueueEntry.cpp; sourceTree = "<group>"; };
+		13CB515A2125EAB3003AD727 /* CubismJson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismJson.cpp; sourceTree = "<group>"; };
+		13CB515B2125EAB3003AD727 /* CubismString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismString.cpp; sourceTree = "<group>"; };
+		13CB515C2125EAB3003AD727 /* CubismDebug.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismDebug.hpp; sourceTree = "<group>"; };
+		13CB515D2125EAB3003AD727 /* CubismString.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismString.hpp; sourceTree = "<group>"; };
+		13CB515E2125EAB3003AD727 /* CubismDebug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismDebug.cpp; sourceTree = "<group>"; };
+		13CB515F2125EAB3003AD727 /* CubismJson.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismJson.hpp; sourceTree = "<group>"; };
+		13CB51612125EAB4003AD727 /* CubismPhysics.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismPhysics.hpp; sourceTree = "<group>"; };
+		13CB51622125EAB4003AD727 /* CubismPhysicsInternal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismPhysicsInternal.hpp; sourceTree = "<group>"; };
+		13CB51632125EAB4003AD727 /* CubismPhysicsJson.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismPhysicsJson.hpp; sourceTree = "<group>"; };
+		13CB51642125EAB4003AD727 /* CubismPhysicsJson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismPhysicsJson.cpp; sourceTree = "<group>"; };
+		13CB51652125EAB4003AD727 /* CubismPhysics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismPhysics.cpp; sourceTree = "<group>"; };
+		13CB51662125EAB4003AD727 /* CubismFramework.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CubismFramework.hpp; path = Framework/src/CubismFramework.hpp; sourceTree = "<group>"; };
+		13CB51682125EAB4003AD727 /* CubismPose.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismPose.cpp; sourceTree = "<group>"; };
+		13CB51692125EAB4003AD727 /* CubismEyeBlink.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismEyeBlink.cpp; sourceTree = "<group>"; };
+		13CB516A2125EAB4003AD727 /* CubismBreath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismBreath.cpp; sourceTree = "<group>"; };
+		13CB516B2125EAB4003AD727 /* CubismEyeBlink.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismEyeBlink.hpp; sourceTree = "<group>"; };
+		13CB516C2125EAB4003AD727 /* CubismBreath.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismBreath.hpp; sourceTree = "<group>"; };
+		13CB516D2125EAB4003AD727 /* CubismPose.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismPose.hpp; sourceTree = "<group>"; };
+		13CB516E2125EAB4003AD727 /* CubismDefaultParameterId.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CubismDefaultParameterId.cpp; path = Framework/src/CubismDefaultParameterId.cpp; sourceTree = "<group>"; };
+		13CB516F2125EAB4003AD727 /* CubismFramework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CubismFramework.cpp; path = Framework/src/CubismFramework.cpp; sourceTree = "<group>"; };
+		13CB51712125EAB4003AD727 /* CubismModelUserData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismModelUserData.cpp; sourceTree = "<group>"; };
+		13CB51722125EAB4003AD727 /* CubismModelUserDataJson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismModelUserDataJson.cpp; sourceTree = "<group>"; };
+		13CB51732125EAB4003AD727 /* CubismUserModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismUserModel.cpp; sourceTree = "<group>"; };
+		13CB51742125EAB4003AD727 /* CubismMoc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismMoc.cpp; sourceTree = "<group>"; };
+		13CB51752125EAB4003AD727 /* CubismModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismModel.hpp; sourceTree = "<group>"; };
+		13CB51762125EAB4003AD727 /* CubismUserModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismUserModel.hpp; sourceTree = "<group>"; };
+		13CB51772125EAB4003AD727 /* CubismMoc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismMoc.hpp; sourceTree = "<group>"; };
+		13CB51782125EAB4003AD727 /* CubismModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismModel.cpp; sourceTree = "<group>"; };
+		13CB51792125EAB4003AD727 /* CubismModelUserData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismModelUserData.hpp; sourceTree = "<group>"; };
+		13CB517A2125EAB4003AD727 /* CubismModelUserDataJson.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismModelUserDataJson.hpp; sourceTree = "<group>"; };
+		13CB517B2125EAB4003AD727 /* Live2DCubismCore.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Live2DCubismCore.hpp; path = Framework/src/Live2DCubismCore.hpp; sourceTree = "<group>"; };
+		13CB517D2125EAB4003AD727 /* CubismIdManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismIdManager.hpp; sourceTree = "<group>"; };
+		13CB517E2125EAB4003AD727 /* CubismId.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismId.hpp; sourceTree = "<group>"; };
+		13CB517F2125EAB4003AD727 /* CubismIdManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismIdManager.cpp; sourceTree = "<group>"; };
+		13CB51802125EAB4003AD727 /* CubismId.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismId.cpp; sourceTree = "<group>"; };
+		13CB51812125EAB4003AD727 /* CubismModelSettingJson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CubismModelSettingJson.cpp; path = Framework/src/CubismModelSettingJson.cpp; sourceTree = "<group>"; };
+		13CB51832125EAB4003AD727 /* CubismRenderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismRenderer.hpp; sourceTree = "<group>"; };
+		13CB51842125EAB4003AD727 /* CubismRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismRenderer.cpp; sourceTree = "<group>"; };
+		13CB51862125EAB4003AD727 /* CubismRenderer_OpenGLES2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubismRenderer_OpenGLES2.cpp; sourceTree = "<group>"; };
+		13CB51872125EAB4003AD727 /* CubismRenderer_OpenGLES2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismRenderer_OpenGLES2.hpp; sourceTree = "<group>"; };
+		13CB51892125EAB4003AD727 /* csmRectF.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = csmRectF.hpp; sourceTree = "<group>"; };
+		13CB518A2125EAB4003AD727 /* csmString.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = csmString.hpp; sourceTree = "<group>"; };
+		13CB518B2125EAB4003AD727 /* CubismBasicType.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubismBasicType.hpp; sourceTree = "<group>"; };
+		13CB518C2125EAB4003AD727 /* csmString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = csmString.cpp; sourceTree = "<group>"; };
+		13CB518D2125EAB4003AD727 /* csmVector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = csmVector.hpp; sourceTree = "<group>"; };
+		13CB518E2125EAB4003AD727 /* csmRectF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = csmRectF.cpp; sourceTree = "<group>"; };
+		13CB518F2125EAB4003AD727 /* csmMap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = csmMap.hpp; sourceTree = "<group>"; };
+		13CB51902125EAB4003AD727 /* ICubismModelSetting.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ICubismModelSetting.hpp; path = Framework/src/ICubismModelSetting.hpp; sourceTree = "<group>"; };
+		13CB51912125EAB4003AD727 /* CubismDefaultParameterId.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CubismDefaultParameterId.hpp; path = Framework/src/CubismDefaultParameterId.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +153,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13CB51372125E9EA003AD727 /* OpenGLES.framework in Frameworks */,
+				13CB51352125E9E5003AD727 /* GLKit.framework in Frameworks */,
+				13CB51332125E9DE003AD727 /* libLive2DCubismCore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +165,10 @@
 		13CB50EF2125E8B6003AD727 = {
 			isa = PBXGroup;
 			children = (
+				13CB51382125EA99003AD727 /* Framework */,
 				13CB50FA2125E8B6003AD727 /* Cubism3-ARKit */,
 				13CB50F92125E8B6003AD727 /* Products */,
+				13CB51312125E9DE003AD727 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +194,191 @@
 				13CB510A2125E8B8003AD727 /* main.m */,
 			);
 			path = "Cubism3-ARKit";
+			sourceTree = "<group>";
+		};
+		13CB51312125E9DE003AD727 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13CB51362125E9EA003AD727 /* OpenGLES.framework */,
+				13CB51342125E9E5003AD727 /* GLKit.framework */,
+				13CB51322125E9DE003AD727 /* libLive2DCubismCore.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13CB51382125EA99003AD727 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				13CB516E2125EAB4003AD727 /* CubismDefaultParameterId.cpp */,
+				13CB51912125EAB4003AD727 /* CubismDefaultParameterId.hpp */,
+				13CB516F2125EAB4003AD727 /* CubismFramework.cpp */,
+				13CB51662125EAB4003AD727 /* CubismFramework.hpp */,
+				13CB51482125EAB3003AD727 /* CubismFrameworkConfig.hpp */,
+				13CB51812125EAB4003AD727 /* CubismModelSettingJson.cpp */,
+				13CB51392125EAB3003AD727 /* CubismModelSettingJson.hpp */,
+				13CB51672125EAB4003AD727 /* Effect */,
+				13CB513A2125EAB3003AD727 /* ICubismAllocator.hpp */,
+				13CB51902125EAB4003AD727 /* ICubismModelSetting.hpp */,
+				13CB517C2125EAB4003AD727 /* Id */,
+				13CB517B2125EAB4003AD727 /* Live2DCubismCore.hpp */,
+				13CB513B2125EAB3003AD727 /* Math */,
+				13CB51702125EAB4003AD727 /* Model */,
+				13CB51492125EAB3003AD727 /* Motion */,
+				13CB51602125EAB4003AD727 /* Physics */,
+				13CB51822125EAB4003AD727 /* Rendering */,
+				13CB51882125EAB4003AD727 /* Type */,
+				13CB51592125EAB3003AD727 /* Utils */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		13CB513B2125EAB3003AD727 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				13CB513C2125EAB3003AD727 /* CubismModelMatrix.cpp */,
+				13CB513D2125EAB3003AD727 /* CubismViewMatrix.cpp */,
+				13CB513E2125EAB3003AD727 /* CubismMath.hpp */,
+				13CB513F2125EAB3003AD727 /* CubismVector2.cpp */,
+				13CB51402125EAB3003AD727 /* CubismTargetPoint.cpp */,
+				13CB51412125EAB3003AD727 /* CubismMatrix44.hpp */,
+				13CB51422125EAB3003AD727 /* CubismMath.cpp */,
+				13CB51432125EAB3003AD727 /* CubismTargetPoint.hpp */,
+				13CB51442125EAB3003AD727 /* CubismVector2.hpp */,
+				13CB51452125EAB3003AD727 /* CubismMatrix44.cpp */,
+				13CB51462125EAB3003AD727 /* CubismModelMatrix.hpp */,
+				13CB51472125EAB3003AD727 /* CubismViewMatrix.hpp */,
+			);
+			name = Math;
+			path = Framework/src/Math;
+			sourceTree = "<group>";
+		};
+		13CB51492125EAB3003AD727 /* Motion */ = {
+			isa = PBXGroup;
+			children = (
+				13CB514A2125EAB3003AD727 /* CubismMotionQueueEntry.hpp */,
+				13CB514B2125EAB3003AD727 /* CubismMotionQueueManager.hpp */,
+				13CB514C2125EAB3003AD727 /* ACubismMotion.cpp */,
+				13CB514D2125EAB3003AD727 /* CubismMotion.cpp */,
+				13CB514E2125EAB3003AD727 /* CubismMotionManager.cpp */,
+				13CB514F2125EAB3003AD727 /* CubismExpressionMotion.hpp */,
+				13CB51502125EAB3003AD727 /* CubismMotionJson.hpp */,
+				13CB51512125EAB3003AD727 /* CubismMotionQueueManager.cpp */,
+				13CB51522125EAB3003AD727 /* CubismMotion.hpp */,
+				13CB51532125EAB3003AD727 /* ACubismMotion.hpp */,
+				13CB51542125EAB3003AD727 /* CubismMotionInternal.hpp */,
+				13CB51552125EAB3003AD727 /* CubismMotionManager.hpp */,
+				13CB51562125EAB3003AD727 /* CubismExpressionMotion.cpp */,
+				13CB51572125EAB3003AD727 /* CubismMotionJson.cpp */,
+				13CB51582125EAB3003AD727 /* CubismMotionQueueEntry.cpp */,
+			);
+			name = Motion;
+			path = Framework/src/Motion;
+			sourceTree = "<group>";
+		};
+		13CB51592125EAB3003AD727 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				13CB515A2125EAB3003AD727 /* CubismJson.cpp */,
+				13CB515B2125EAB3003AD727 /* CubismString.cpp */,
+				13CB515C2125EAB3003AD727 /* CubismDebug.hpp */,
+				13CB515D2125EAB3003AD727 /* CubismString.hpp */,
+				13CB515E2125EAB3003AD727 /* CubismDebug.cpp */,
+				13CB515F2125EAB3003AD727 /* CubismJson.hpp */,
+			);
+			name = Utils;
+			path = Framework/src/Utils;
+			sourceTree = "<group>";
+		};
+		13CB51602125EAB4003AD727 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				13CB51612125EAB4003AD727 /* CubismPhysics.hpp */,
+				13CB51622125EAB4003AD727 /* CubismPhysicsInternal.hpp */,
+				13CB51632125EAB4003AD727 /* CubismPhysicsJson.hpp */,
+				13CB51642125EAB4003AD727 /* CubismPhysicsJson.cpp */,
+				13CB51652125EAB4003AD727 /* CubismPhysics.cpp */,
+			);
+			name = Physics;
+			path = Framework/src/Physics;
+			sourceTree = "<group>";
+		};
+		13CB51672125EAB4003AD727 /* Effect */ = {
+			isa = PBXGroup;
+			children = (
+				13CB51682125EAB4003AD727 /* CubismPose.cpp */,
+				13CB51692125EAB4003AD727 /* CubismEyeBlink.cpp */,
+				13CB516A2125EAB4003AD727 /* CubismBreath.cpp */,
+				13CB516B2125EAB4003AD727 /* CubismEyeBlink.hpp */,
+				13CB516C2125EAB4003AD727 /* CubismBreath.hpp */,
+				13CB516D2125EAB4003AD727 /* CubismPose.hpp */,
+			);
+			name = Effect;
+			path = Framework/src/Effect;
+			sourceTree = "<group>";
+		};
+		13CB51702125EAB4003AD727 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13CB51712125EAB4003AD727 /* CubismModelUserData.cpp */,
+				13CB51722125EAB4003AD727 /* CubismModelUserDataJson.cpp */,
+				13CB51732125EAB4003AD727 /* CubismUserModel.cpp */,
+				13CB51742125EAB4003AD727 /* CubismMoc.cpp */,
+				13CB51752125EAB4003AD727 /* CubismModel.hpp */,
+				13CB51762125EAB4003AD727 /* CubismUserModel.hpp */,
+				13CB51772125EAB4003AD727 /* CubismMoc.hpp */,
+				13CB51782125EAB4003AD727 /* CubismModel.cpp */,
+				13CB51792125EAB4003AD727 /* CubismModelUserData.hpp */,
+				13CB517A2125EAB4003AD727 /* CubismModelUserDataJson.hpp */,
+			);
+			name = Model;
+			path = Framework/src/Model;
+			sourceTree = "<group>";
+		};
+		13CB517C2125EAB4003AD727 /* Id */ = {
+			isa = PBXGroup;
+			children = (
+				13CB517D2125EAB4003AD727 /* CubismIdManager.hpp */,
+				13CB517E2125EAB4003AD727 /* CubismId.hpp */,
+				13CB517F2125EAB4003AD727 /* CubismIdManager.cpp */,
+				13CB51802125EAB4003AD727 /* CubismId.cpp */,
+			);
+			name = Id;
+			path = Framework/src/Id;
+			sourceTree = "<group>";
+		};
+		13CB51822125EAB4003AD727 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				13CB51832125EAB4003AD727 /* CubismRenderer.hpp */,
+				13CB51842125EAB4003AD727 /* CubismRenderer.cpp */,
+				13CB51852125EAB4003AD727 /* OpenGL */,
+			);
+			name = Rendering;
+			path = Framework/src/Rendering;
+			sourceTree = "<group>";
+		};
+		13CB51852125EAB4003AD727 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				13CB51862125EAB4003AD727 /* CubismRenderer_OpenGLES2.cpp */,
+				13CB51872125EAB4003AD727 /* CubismRenderer_OpenGLES2.hpp */,
+			);
+			path = OpenGL;
+			sourceTree = "<group>";
+		};
+		13CB51882125EAB4003AD727 /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				13CB51892125EAB4003AD727 /* csmRectF.hpp */,
+				13CB518A2125EAB4003AD727 /* csmString.hpp */,
+				13CB518B2125EAB4003AD727 /* CubismBasicType.hpp */,
+				13CB518C2125EAB4003AD727 /* csmString.cpp */,
+				13CB518D2125EAB4003AD727 /* csmVector.hpp */,
+				13CB518E2125EAB4003AD727 /* csmRectF.cpp */,
+				13CB518F2125EAB4003AD727 /* csmMap.hpp */,
+			);
+			name = Type;
+			path = Framework/src/Type;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +451,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13CB51942125EAB5003AD727 /* CubismVector2.cpp in Sources */,
+				13CB51A92125EAB5003AD727 /* CubismModelUserData.cpp in Sources */,
+				13CB51952125EAB5003AD727 /* CubismTargetPoint.cpp in Sources */,
+				13CB519C2125EAB5003AD727 /* CubismExpressionMotion.cpp in Sources */,
 				13CB51002125E8B6003AD727 /* ViewController.m in Sources */,
 				13CB510B2125E8B8003AD727 /* main.m in Sources */,
+				13CB51AB2125EAB5003AD727 /* CubismUserModel.cpp in Sources */,
+				13CB519A2125EAB5003AD727 /* CubismMotionManager.cpp in Sources */,
+				13CB51982125EAB5003AD727 /* ACubismMotion.cpp in Sources */,
+				13CB519B2125EAB5003AD727 /* CubismMotionQueueManager.cpp in Sources */,
+				13CB51962125EAB5003AD727 /* CubismMath.cpp in Sources */,
+				13CB51932125EAB5003AD727 /* CubismViewMatrix.cpp in Sources */,
+				13CB51A62125EAB5003AD727 /* CubismBreath.cpp in Sources */,
+				13CB519D2125EAB5003AD727 /* CubismMotionJson.cpp in Sources */,
+				13CB519E2125EAB5003AD727 /* CubismMotionQueueEntry.cpp in Sources */,
+				13CB51B02125EAB5003AD727 /* CubismModelSettingJson.cpp in Sources */,
+				13CB51AE2125EAB5003AD727 /* CubismIdManager.cpp in Sources */,
+				13CB51972125EAB5003AD727 /* CubismMatrix44.cpp in Sources */,
+				13CB51A52125EAB5003AD727 /* CubismEyeBlink.cpp in Sources */,
+				13CB51B12125EAB5003AD727 /* CubismRenderer.cpp in Sources */,
+				13CB51AD2125EAB5003AD727 /* CubismModel.cpp in Sources */,
+				13CB51B22125EAB5003AD727 /* CubismRenderer_OpenGLES2.cpp in Sources */,
+				13CB51A82125EAB5003AD727 /* CubismFramework.cpp in Sources */,
+				13CB51AC2125EAB5003AD727 /* CubismMoc.cpp in Sources */,
+				13CB51A02125EAB5003AD727 /* CubismString.cpp in Sources */,
+				13CB51992125EAB5003AD727 /* CubismMotion.cpp in Sources */,
+				13CB51AA2125EAB5003AD727 /* CubismModelUserDataJson.cpp in Sources */,
 				13CB50FD2125E8B6003AD727 /* AppDelegate.m in Sources */,
+				13CB51AF2125EAB5003AD727 /* CubismId.cpp in Sources */,
+				13CB51A12125EAB5003AD727 /* CubismDebug.cpp in Sources */,
+				13CB51A32125EAB5003AD727 /* CubismPhysics.cpp in Sources */,
+				13CB519F2125EAB5003AD727 /* CubismJson.cpp in Sources */,
+				13CB51B42125EAB5003AD727 /* csmRectF.cpp in Sources */,
+				13CB51B32125EAB5003AD727 /* csmString.cpp in Sources */,
+				13CB51A72125EAB5003AD727 /* CubismDefaultParameterId.cpp in Sources */,
+				13CB51A22125EAB5003AD727 /* CubismPhysicsJson.cpp in Sources */,
+				13CB51922125EAB5003AD727 /* CubismModelMatrix.cpp in Sources */,
+				13CB51A42125EAB5003AD727 /* CubismPose.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,10 +630,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8G7ZB52773;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Framework/src",
+					"$(SRCROOT)/Core/include",
+					"$(SRCROOT)/thirdParty/stb/include",
+				);
 				INFOPLIST_FILE = "Cubism3-ARKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/Core/lib/ios/$(CONFIGURATION)-$(PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Core/lib/ios/Debug-iphoneos",
+				);
+				OTHER_CFLAGS = (
+					"-D_USE_MATH_DEFINES",
+					"-DCSM_TARGET_IPHONE_ES2",
+					"-DGLEW_STATIC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "matsune.Cubism3-ARKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,10 +661,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8G7ZB52773;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Framework/src",
+					"$(SRCROOT)/Core/include",
+					"$(SRCROOT)/thirdParty/stb/include",
+				);
 				INFOPLIST_FILE = "Cubism3-ARKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/Core/lib/ios/$(CONFIGURATION)-$(PLATFORM_NAME)",
+					"$(PROJECT_DIR)/Core/lib/ios/Debug-iphoneos",
+				);
+				OTHER_CFLAGS = (
+					"-D_USE_MATH_DEFINES",
+					"-DCSM_TARGET_IPHONE_ES2",
+					"-DGLEW_STATIC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "matsune.Cubism3-ARKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
