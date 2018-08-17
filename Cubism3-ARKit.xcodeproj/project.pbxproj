@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1303387221270A4D00EEEDB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1303387121270A4D00EEEDB4 /* Main.storyboard */; };
+		130338752127191D00EEEDB4 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130338742127191D00EEEDB4 /* MenuViewController.m */; };
+		1303387721271F9C00EEEDB4 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1303387621271F9C00EEEDB4 /* MenuCell.m */; };
 		13CB50FD2125E8B6003AD727 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13CB50FC2125E8B6003AD727 /* AppDelegate.mm */; };
 		13CB51002125E8B6003AD727 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13CB50FF2125E8B6003AD727 /* ViewController.mm */; };
 		13CB51052125E8B8003AD727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CB51042125E8B8003AD727 /* Assets.xcassets */; };
@@ -58,6 +61,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1303387121270A4D00EEEDB4 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		130338732127190100EEEDB4 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		130338742127191D00EEEDB4 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		1303387621271F9C00EEEDB4 /* MenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuCell.m; sourceTree = "<group>"; };
+		1303387821271FA600EEEDB4 /* MenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuCell.h; sourceTree = "<group>"; };
 		13CB50F82125E8B6003AD727 /* Cubism3-ARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cubism3-ARKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CB50FB2125E8B6003AD727 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		13CB50FC2125E8B6003AD727 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -205,6 +213,11 @@
 				13CB51062125E8B8003AD727 /* LaunchScreen.storyboard */,
 				13CB51092125E8B8003AD727 /* Info.plist */,
 				13CB510A2125E8B8003AD727 /* main.m */,
+				1303387121270A4D00EEEDB4 /* Main.storyboard */,
+				130338732127190100EEEDB4 /* MenuViewController.h */,
+				130338742127191D00EEEDB4 /* MenuViewController.m */,
+				1303387621271F9C00EEEDB4 /* MenuCell.m */,
+				1303387821271FA600EEEDB4 /* MenuCell.h */,
 			);
 			path = "Cubism3-ARKit";
 			sourceTree = "<group>";
@@ -469,6 +482,7 @@
 				13CB521921264C96003AD727 /* model in Resources */,
 				13CB51082125E8B8003AD727 /* LaunchScreen.storyboard in Resources */,
 				13CB51052125E8B8003AD727 /* Assets.xcassets in Resources */,
+				1303387221270A4D00EEEDB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +518,8 @@
 				13CB51AD2125EAB5003AD727 /* CubismModel.cpp in Sources */,
 				13CB51B22125EAB5003AD727 /* CubismRenderer_OpenGLES2.cpp in Sources */,
 				13CB51A82125EAB5003AD727 /* CubismFramework.cpp in Sources */,
+				130338752127191D00EEEDB4 /* MenuViewController.m in Sources */,
+				1303387721271F9C00EEEDB4 /* MenuCell.m in Sources */,
 				13CB51B72125ED35003AD727 /* LAppAllocator.mm in Sources */,
 				13CB51AC2125EAB5003AD727 /* CubismMoc.cpp in Sources */,
 				13CB51A02125EAB5003AD727 /* CubismString.cpp in Sources */,

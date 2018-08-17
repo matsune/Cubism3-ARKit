@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
 #import <ARKit/ARKit.h>
+#import "MenuViewController.h"
 
-@interface ViewController : GLKViewController <GLKViewDelegate, ARSessionDelegate, ARSCNViewDelegate>
+@interface ViewController : GLKViewController <GLKViewDelegate, ARSessionDelegate, ARSCNViewDelegate, UIPopoverPresentationControllerDelegate, MenuViewControllerDelegate>
 
 @property (nonatomic, assign) bool mOpenGLRun;
 @property (nonatomic) GLuint vertexBufferId;

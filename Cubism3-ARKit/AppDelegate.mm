@@ -6,6 +6,7 @@
 //  Copyright © 2018 matsune. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "LAppAllocator.h"
 
@@ -24,7 +25,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.viewController = [[ViewController alloc] initWithNibName:nil bundle:nil];
+    self.viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]
+                           instantiateViewControllerWithIdentifier:@"ViewController"];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 

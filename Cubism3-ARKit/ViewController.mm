@@ -20,7 +20,8 @@ using namespace Csm;
 
 @property (nonatomic) LAppModel *model;
 
-@property (nonatomic) ARSCNView *sceneView;
+@property (weak, nonatomic) IBOutlet ARSCNView *sceneView;
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
 
 @property (nonatomic) const CubismId *mouthOpenId;
 @property (nonatomic) const CubismId *eyeBallX;
@@ -92,13 +93,28 @@ static const GLfloat uv[] =
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupUI];
+    [self setupGL];
+}
+
+- (void)setupUI {
+    self.sceneView.delegate = self;
+    self.sceneView.session.delegate = self;
+    [self.sceneView setAutomaticallyUpdatesLighting:true];
     
+    [self.addButton.layer setMasksToBounds:false];
+    [self.addButton.layer setShadowColor:[UIColor colorWithWhite:0.2 alpha:1.0].CGColor];
+    [self.addButton.layer setShadowOpacity:0.6];
+    [self.addButton.layer setShadowOffset:CGSizeMake(0, 3.5f)];
+    [self.addButton.layer setShadowRadius:3.5f];
+}
+
+- (void)setupGL {
     mOpenGLRun = true;
     
     GLKView *view = (GLKView*)self.view;
     
     view.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-    // set context
     [EAGLContext setCurrentContext:view.context];
     
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
@@ -115,14 +131,6 @@ static const GLfloat uv[] =
     glGenBuffers(1, &_fragmentBufferId);
     glBindBuffer(GL_ARRAY_BUFFER, _fragmentBufferId);
     glBufferData(GL_ARRAY_BUFFER, sizeof(uv), uv, GL_STATIC_DRAW);
-    
-    CGFloat w = 100;
-    CGFloat h = 100.0 / view.bounds.size.width * view.bounds.size.height;
-    self.sceneView = [[ARSCNView alloc] initWithFrame:CGRectMake(view.bounds.size.width - w, view.bounds.size.height - h, w, h)];
-    self.sceneView.delegate = self;
-    self.sceneView.session.delegate = self;
-    [self.sceneView setAutomaticallyUpdatesLighting:true];
-    [self.view addSubview:self.sceneView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -148,16 +156,13 @@ static const GLfloat uv[] =
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
-    //時間更新
     LAppPal::UpdateTime();
     
-    if(mOpenGLRun)
-    {
-        // 画面クリア
+    if (mOpenGLRun) {
+        self.model->Update();
+        
         glClear(GL_COLOR_BUFFER_BIT);
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-        
-        self.model->Update();
         
         int width = rect.size.width;
         int height = rect.size.height;
@@ -167,6 +172,24 @@ static const GLfloat uv[] =
         projection.TranslateY(-0.8);
         self.model->Draw(projection);
     }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UIPopoverPresentationController *popoverController = segue.destinationViewController.popoverPresentationController;
+    UIButton *button = (UIButton *)sender;
+    popoverController.delegate = self;
+    popoverController.sourceRect = button.bounds;
+    
+    MenuViewController *menuVC = (MenuViewController*)segue.destinationViewController;
+    menuVC.menuDelegate = self;
+}
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+    return UIModalPresentationNone;
+}
+
+- (void)didSelectRestart {
+    [self resetTracking];
 }
 
 - (void)session:(ARSession *)session didFailWithError:(NSError *)error {
