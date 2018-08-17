@@ -35,10 +35,13 @@ using namespace Csm;
 @property (nonatomic) const CubismId *browRY;
 @property (nonatomic) const CubismId *browLAngle;
 @property (nonatomic) const CubismId *browRAngle;
-
 @property (nonatomic) const CubismId *angleX;
 @property (nonatomic) const CubismId *angleY;
 @property (nonatomic) const CubismId *angleZ;
+
+@property (nonatomic) const CubismId *bodyAngleX;
+@property (nonatomic) const CubismId *bodyAngleY;
+@property (nonatomic) const CubismId *bodyAngleZ;
 
 @end
 
@@ -79,6 +82,9 @@ static const GLfloat uv[] =
     self.angleX = manager->GetId(DefaultParameterId::ParamAngleX);
     self.angleY = manager->GetId(DefaultParameterId::ParamAngleY);
     self.angleZ = manager->GetId(DefaultParameterId::ParamAngleZ);
+    self.bodyAngleX = manager->GetId(DefaultParameterId::ParamBodyAngleX);
+    self.bodyAngleY = manager->GetId(DefaultParameterId::ParamBodyAngleY);
+    self.bodyAngleZ = manager->GetId(DefaultParameterId::ParamBodyAngleZ);
 }
 
 - (void)viewDidLoad {
@@ -184,6 +190,10 @@ static const GLfloat uv[] =
         self.model->GetModel()->SetParameterValue(self.angleX, -yaw * 40);
         self.model->GetModel()->SetParameterValue(self.angleY, (roll + 0.4) * 2 *30);
         self.model->GetModel()->SetParameterValue(self.angleZ, pitch * 40);
+        
+        self.model->GetModel()->SetParameterValue(self.bodyAngleX, -yaw * 10);
+        self.model->GetModel()->SetParameterValue(self.bodyAngleY, (roll + 0.4) * 2 * 10);
+        self.model->GetModel()->SetParameterValue(self.bodyAngleZ, pitch * 10);
     }
     
     { // eyeball
