@@ -10,14 +10,14 @@
 #import <GLKit/GLKit.h>
 #import <ARKit/ARKit.h>
 
-@interface ViewController : GLKViewController <GLKViewDelegate, ARSessionDelegate>
+@interface ViewController : GLKViewController <GLKViewDelegate, ARSessionDelegate, ARSCNViewDelegate>
 
 @property (nonatomic, assign) bool mOpenGLRun;
 @property (nonatomic) GLuint vertexBufferId;
 @property (nonatomic) GLuint fragmentBufferId;
 @property (nonatomic) GLuint programId;
 
-- (void)initModel;
+- (void)setupCubism;
 
 @end
 

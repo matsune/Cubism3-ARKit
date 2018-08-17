@@ -55,7 +55,6 @@
 		13CB51BD2125F13D003AD727 /* LAppModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51BC2125F13D003AD727 /* LAppModel.mm */; };
 		13CB52172125F3DD003AD727 /* LAppTextureManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13CB52162125F3DD003AD727 /* LAppTextureManager.mm */; };
 		13CB521921264C96003AD727 /* model in Resources */ = {isa = PBXBuildFile; fileRef = 13CB521821264C95003AD727 /* model */; };
-		13CB522521267C4F003AD727 /* ContentUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CB522421267C4F003AD727 /* ContentUpdater.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,8 +158,6 @@
 		13CB52152125F3DD003AD727 /* LAppTextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAppTextureManager.h; sourceTree = "<group>"; };
 		13CB52162125F3DD003AD727 /* LAppTextureManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAppTextureManager.mm; sourceTree = "<group>"; };
 		13CB521821264C95003AD727 /* model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = model; sourceTree = "<group>"; };
-		13CB522421267C4F003AD727 /* ContentUpdater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentUpdater.m; sourceTree = "<group>"; };
-		13CB522621267C59003AD727 /* ContentUpdater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentUpdater.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +196,6 @@
 		13CB50FA2125E8B6003AD727 /* Cubism3-ARKit */ = {
 			isa = PBXGroup;
 			children = (
-				13CB522321267C38003AD727 /* ARKit */,
 				13CB522221267C1E003AD727 /* cubism */,
 				13CB50FB2125E8B6003AD727 /* AppDelegate.h */,
 				13CB50FC2125E8B6003AD727 /* AppDelegate.mm */,
@@ -336,16 +332,16 @@
 		13CB51702125EAB4003AD727 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				13CB51712125EAB4003AD727 /* CubismModelUserData.cpp */,
-				13CB51722125EAB4003AD727 /* CubismModelUserDataJson.cpp */,
-				13CB51732125EAB4003AD727 /* CubismUserModel.cpp */,
 				13CB51742125EAB4003AD727 /* CubismMoc.cpp */,
-				13CB51752125EAB4003AD727 /* CubismModel.hpp */,
-				13CB51762125EAB4003AD727 /* CubismUserModel.hpp */,
 				13CB51772125EAB4003AD727 /* CubismMoc.hpp */,
 				13CB51782125EAB4003AD727 /* CubismModel.cpp */,
+				13CB51752125EAB4003AD727 /* CubismModel.hpp */,
+				13CB51712125EAB4003AD727 /* CubismModelUserData.cpp */,
 				13CB51792125EAB4003AD727 /* CubismModelUserData.hpp */,
+				13CB51722125EAB4003AD727 /* CubismModelUserDataJson.cpp */,
 				13CB517A2125EAB4003AD727 /* CubismModelUserDataJson.hpp */,
+				13CB51732125EAB4003AD727 /* CubismUserModel.cpp */,
+				13CB51762125EAB4003AD727 /* CubismUserModel.hpp */,
 			);
 			name = Model;
 			path = Framework/src/Model;
@@ -354,10 +350,10 @@
 		13CB517C2125EAB4003AD727 /* Id */ = {
 			isa = PBXGroup;
 			children = (
-				13CB517D2125EAB4003AD727 /* CubismIdManager.hpp */,
+				13CB51802125EAB4003AD727 /* CubismId.cpp */,
 				13CB517E2125EAB4003AD727 /* CubismId.hpp */,
 				13CB517F2125EAB4003AD727 /* CubismIdManager.cpp */,
-				13CB51802125EAB4003AD727 /* CubismId.cpp */,
+				13CB517D2125EAB4003AD727 /* CubismIdManager.hpp */,
 			);
 			name = Id;
 			path = Framework/src/Id;
@@ -411,15 +407,6 @@
 				13CB52162125F3DD003AD727 /* LAppTextureManager.mm */,
 			);
 			path = cubism;
-			sourceTree = "<group>";
-		};
-		13CB522321267C38003AD727 /* ARKit */ = {
-			isa = PBXGroup;
-			children = (
-				13CB522421267C4F003AD727 /* ContentUpdater.m */,
-				13CB522621267C59003AD727 /* ContentUpdater.h */,
-			);
-			path = ARKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,7 +498,6 @@
 				13CB519E2125EAB5003AD727 /* CubismMotionQueueEntry.cpp in Sources */,
 				13CB51B02125EAB5003AD727 /* CubismModelSettingJson.cpp in Sources */,
 				13CB51AE2125EAB5003AD727 /* CubismIdManager.cpp in Sources */,
-				13CB522521267C4F003AD727 /* ContentUpdater.m in Sources */,
 				13CB51972125EAB5003AD727 /* CubismMatrix44.cpp in Sources */,
 				13CB51A52125EAB5003AD727 /* CubismEyeBlink.cpp in Sources */,
 				13CB51B12125EAB5003AD727 /* CubismRenderer.cpp in Sources */,

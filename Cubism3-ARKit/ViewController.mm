@@ -11,14 +11,30 @@
 #import "ViewController.h"
 #import "LAppModel.h"
 #import "LAppPal.h"
-#import "ARKit/ContentUpdater.h"
+#import "CubismDefaultParameterId.hpp"
+#import "CubismIdManager.hpp"
+
+using namespace Csm;
 
 @interface ViewController ()
 
 @property (nonatomic) LAppModel *model;
 
 @property (nonatomic) ARSCNView *sceneView;
-@property (nonatomic) ContentUpdater *updater;
+
+@property (nonatomic) const CubismId *mouthOpenId;
+@property (nonatomic) const CubismId *eyeBallX;
+@property (nonatomic) const CubismId *eyeBallY;
+@property (nonatomic) const CubismId *eyeOpenL;
+@property (nonatomic) const CubismId *eyeOpenR;
+@property (nonatomic) const CubismId *eyeSmileL;
+@property (nonatomic) const CubismId *eyeSmileR;
+@property (nonatomic) const CubismId *browLX;
+@property (nonatomic) const CubismId *browLY;
+@property (nonatomic) const CubismId *browRX;
+@property (nonatomic) const CubismId *browRY;
+@property (nonatomic) const CubismId *browLAngle;
+@property (nonatomic) const CubismId *browRAngle;
 
 @end
 
@@ -38,9 +54,24 @@ static const GLfloat uv[] =
     delete self.model;
 }
 
-- (void)initModel {
+- (void)setupCubism {
     self.model = new LAppModel();
     self.model->LoadAssets([@"model/Haru/" UTF8String], [@"Haru.model3.json" UTF8String]);
+    
+    CubismIdManager *manager = CubismFramework::GetIdManager();
+    self.mouthOpenId = manager->GetId(DefaultParameterId::ParamMouthOpenY);
+    self.eyeBallX = manager->GetId(DefaultParameterId::ParamEyeBallX);
+    self.eyeBallY = manager->GetId(DefaultParameterId::ParamEyeBallY);
+    self.eyeOpenL = manager->GetId(DefaultParameterId::ParamEyeLOpen);
+    self.eyeOpenR = manager->GetId(DefaultParameterId::ParamEyeROpen);
+    self.eyeSmileL = manager->GetId(DefaultParameterId::ParamEyeLSmile);
+    self.eyeSmileR = manager->GetId(DefaultParameterId::ParamEyeRSmile);
+    self.browLX = manager->GetId(DefaultParameterId::ParamBrowLX);
+    self.browLY = manager->GetId(DefaultParameterId::ParamBrowLY);
+    self.browRX = manager->GetId(DefaultParameterId::ParamBrowRX);
+    self.browRY = manager->GetId(DefaultParameterId::ParamBrowRY);
+    self.browLAngle = manager->GetId(DefaultParameterId::ParamBrowLAngle);
+    self.browRAngle = manager->GetId(DefaultParameterId::ParamBrowRAngle);
 }
 
 - (void)viewDidLoad {
@@ -69,12 +100,10 @@ static const GLfloat uv[] =
     glBindBuffer(GL_ARRAY_BUFFER, _fragmentBufferId);
     glBufferData(GL_ARRAY_BUFFER, sizeof(uv), uv, GL_STATIC_DRAW);
     
-    self.updater = [[ContentUpdater alloc] init];
-    
     CGFloat w = 100;
     CGFloat h = 100.0 / view.bounds.size.width * view.bounds.size.height;
     self.sceneView = [[ARSCNView alloc] initWithFrame:CGRectMake(view.bounds.size.width - w, view.bounds.size.height - h, w, h)];
-    self.sceneView.delegate = self.updater;
+    self.sceneView.delegate = self;
     self.sceneView.session.delegate = self;
     [self.sceneView setAutomaticallyUpdatesLighting:true];
     [self.view addSubview:self.sceneView];
@@ -135,6 +164,56 @@ static const GLfloat uv[] =
     dispatch_async(dispatch_get_main_queue(), ^{
         [self resetTracking];
     });
+}
+
+- (void)renderer:(id<SCNSceneRenderer>)renderer didUpdateNode:(SCNNode *)node forAnchor:(ARAnchor *)anchor {
+    ARFaceAnchor *faceAnchor = (ARFaceAnchor*)anchor;
+    { // eyeball
+        CGFloat lookUpL = [faceAnchor.blendShapes[ARBlendShapeLocationEyeLookUpLeft] floatValue];
+        CGFloat lookDownL = [faceAnchor.blendShapes[ARBlendShapeLocationEyeLookDownLeft] floatValue];
+        CGFloat lookInL = [faceAnchor.blendShapes[ARBlendShapeLocationEyeLookInLeft] floatValue];
+        CGFloat lookOutL = [faceAnchor.blendShapes[ARBlendShapeLocationEyeLookOutLeft] floatValue];
+        CGFloat lookUpR = [faceAnchor.blendShapes[ARBlendShapeLocationEyeLookUpRight] floatValue];
+        CGFloat lookDownR = [faceAnchor.blendShapes[ARBlendShapeLocationEyeLookDownRight] floatValue];
+        CGFloat lookInR = [faceAnchor.blendShapes[ARBlendShapeLocationEyeLookInRight] floatValue];
+        CGFloat lookOutR = [faceAnchor.blendShapes[ARBlendShapeLocationEyeLookOutRight] floatValue];
+        CGFloat xEyeL = lookOutL - lookInL;
+        CGFloat xEyeR = lookInR - lookOutR;
+        CGFloat yEyeL = lookUpL - lookDownL;
+        CGFloat yEyeR = lookUpR - lookDownR;
+        self.model->GetModel()->SetParameterValue(self.eyeBallX, (xEyeL + xEyeR) / 2);
+        self.model->GetModel()->SetParameterValue(self.eyeBallY, (yEyeL + yEyeR) / 2);
+    }
+    
+    { // eye blink
+        CGFloat eyeBlinkL = [faceAnchor.blendShapes[ARBlendShapeLocationEyeBlinkLeft] floatValue];
+        CGFloat eyeBlinkR = [faceAnchor.blendShapes[ARBlendShapeLocationEyeBlinkRight] floatValue];
+        // blink invert eyeOpen
+        self.model->GetModel()->SetParameterValue(self.eyeOpenL, (eyeBlinkL - 0.5) * -2.0);
+        self.model->GetModel()->SetParameterValue(self.eyeOpenR, (eyeBlinkR - 0.5) * -2.0);
+        
+        CGFloat eyeSquintL = [faceAnchor.blendShapes[ARBlendShapeLocationEyeSquintLeft] floatValue];
+        CGFloat eyeSquintR = [faceAnchor.blendShapes[ARBlendShapeLocationEyeSquintRight] floatValue];
+        self.model->GetModel()->SetParameterValue(self.eyeSmileL, eyeSquintL * 1.4);
+        self.model->GetModel()->SetParameterValue(self.eyeSmileR, eyeSquintR * 1.4);
+    }
+    
+    { // eye brow
+        CGFloat innerUp = [faceAnchor.blendShapes[ARBlendShapeLocationBrowInnerUp] floatValue];
+        CGFloat outerUpL = [faceAnchor.blendShapes[ARBlendShapeLocationBrowOuterUpLeft] floatValue];
+        CGFloat outerUpR = [faceAnchor.blendShapes[ARBlendShapeLocationBrowOuterUpRight] floatValue];
+        CGFloat downL = [faceAnchor.blendShapes[ARBlendShapeLocationBrowDownLeft] floatValue];
+        CGFloat downR = [faceAnchor.blendShapes[ARBlendShapeLocationBrowDownRight] floatValue];
+        self.model->GetModel()->SetParameterValue(self.browLY, (innerUp + outerUpL) / 2);
+        self.model->GetModel()->SetParameterValue(self.browRY, (innerUp + outerUpR) / 2);
+        self.model->GetModel()->SetParameterValue(self.browLAngle, (innerUp - outerUpL + downL) * (2 / 3) - (1 / 3));
+        self.model->GetModel()->SetParameterValue(self.browRAngle, (innerUp - outerUpR + downR) * (2 / 3) - (1 / 3));
+    }
+    
+    { // mouth
+        CGFloat jawOpen = [faceAnchor.blendShapes[ARBlendShapeLocationJawOpen] floatValue];
+        self.model->GetModel()->SetParameterValue(self.mouthOpenId, jawOpen);
+    }
 }
 
 @end

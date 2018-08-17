@@ -29,7 +29,7 @@
     [self.window makeKeyAndVisible];
 
     [self initializeCubism];
-    [self.viewController initModel];
+    [self.viewController setupCubism];
         
     return YES;
 }
@@ -68,6 +68,7 @@
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    self.viewController.mOpenGLRun = false;
     [self releaseCubism];
 }
 
