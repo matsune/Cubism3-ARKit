@@ -19,6 +19,7 @@ using namespace Csm;
 @interface ViewController ()
 
 @property (nonatomic) LAppModel *model;
+@property (nonatomic) bool showFace;
 
 @property (weak, nonatomic) IBOutlet ARSCNView *sceneView;
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
@@ -39,7 +40,6 @@ using namespace Csm;
 @property (nonatomic) const CubismId *angleX;
 @property (nonatomic) const CubismId *angleY;
 @property (nonatomic) const CubismId *angleZ;
-
 @property (nonatomic) const CubismId *bodyAngleX;
 @property (nonatomic) const CubismId *bodyAngleY;
 @property (nonatomic) const CubismId *bodyAngleZ;
@@ -93,6 +93,8 @@ static const GLfloat uv[] =
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _showFace = true;
+    
     [self setupUI];
     [self setupGL];
 }
@@ -155,6 +157,10 @@ static const GLfloat uv[] =
     [self.sceneView.session runWithConfiguration:conf options:ARSessionRunOptionResetTracking|ARSessionRunOptionRemoveExistingAnchors];
 }
 
+- (void)setShowFace:(bool)showFace {
+    [self.sceneView setHidden:!showFace];
+}
+
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
     LAppPal::UpdateTime();
     
@@ -181,6 +187,7 @@ static const GLfloat uv[] =
     popoverController.sourceRect = button.bounds;
     
     MenuViewController *menuVC = (MenuViewController*)segue.destinationViewController;
+    menuVC.showFace = self.showFace;
     menuVC.menuDelegate = self;
 }
 
@@ -190,6 +197,11 @@ static const GLfloat uv[] =
 
 - (void)didSelectRestart {
     [self resetTracking];
+}
+
+- (void)didChangeShowFace:(bool)showFace {
+    [self.sceneView setHidden:!showFace];
+    _showFace = showFace;
 }
 
 - (void)session:(ARSession *)session didFailWithError:(NSError *)error {

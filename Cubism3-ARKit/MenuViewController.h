@@ -15,12 +15,14 @@
 @protocol MenuViewControllerDelegate <NSObject>
 
 - (void)didSelectRestart;
+- (void)didChangeShowFace:(bool)showFace;
 
 @end
 
 @interface MenuViewController : UICollectionViewController
 
 @property (weak, nonatomic) id <MenuViewControllerDelegate> menuDelegate;
+@property (nonatomic) bool showFace;
 
 @end
 

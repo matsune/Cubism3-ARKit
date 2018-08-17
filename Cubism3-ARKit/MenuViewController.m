@@ -18,12 +18,13 @@
 @end
 
 @implementation MenuViewController
+@synthesize showFace;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.titles = [[NSArray alloc] initWithObjects:@"Restart", nil];
-    self.images = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"restart"], nil];
+    self.titles = [[NSArray alloc] initWithObjects:@"Restart", @"Face", nil];
+    self.images = [[NSArray alloc] initWithObjects:@"restart", @"none", nil];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -40,7 +41,10 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MenuCell *cell = (MenuCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"MenuCell" forIndexPath:indexPath];
-    [cell bindImage:self.images[indexPath.row] Title:self.titles[indexPath.row]];
+    [cell bindImage:[UIImage imageNamed:self.images[indexPath.row]] Title:self.titles[indexPath.row]];
+    if (indexPath.row == 1) {
+        [cell setSelected:!self.showFace];
+    }
     return cell;
 }
 
@@ -49,7 +53,12 @@
         if ([self.menuDelegate respondsToSelector:@selector(didSelectRestart)]) {
             [self.menuDelegate didSelectRestart];
         }
+    } else {
+        if ([self.menuDelegate respondsToSelector:@selector(didChangeShowFace:)]) {
+            [self.menuDelegate didChangeShowFace:!self.showFace];
+        }
     }
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 @end
