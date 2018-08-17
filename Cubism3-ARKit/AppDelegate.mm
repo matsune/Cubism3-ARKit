@@ -22,11 +22,15 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    _viewController = [[ViewController alloc] initWithNibName:nil bundle:nil];
-    _window.rootViewController = _viewController;
-    [_window makeKeyAndVisible];
-    [_window setBackgroundColor:[UIColor whiteColor]];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.viewController = [[ViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+
+    [self initializeCubism];
+    [self.viewController initModel];
+        
     return YES;
 }
 
@@ -34,11 +38,9 @@
     _cubismOption.LogFunction = LAppPal::PrintMessage;
     _cubismOption.LoggingLevel = Live2D::Cubism::Framework::CubismFramework::Option::LogLevel_Verbose;
     
-    Csm::CubismFramework::StartUp(&_cubismAllocator,&_cubismOption);
+    Csm::CubismFramework::StartUp(&_cubismAllocator, &_cubismOption);
     Csm::CubismFramework::Initialize();
-    
-//    [LAppLive2DManager getInstance];
-    
+
     LAppPal::UpdateTime();
 }
 
@@ -52,12 +54,12 @@
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    
+    self.viewController.mOpenGLRun = false;
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    
+    self.viewController.mOpenGLRun = true;
 }
 
 

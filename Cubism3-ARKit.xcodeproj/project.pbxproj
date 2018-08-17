@@ -52,6 +52,9 @@
 		13CB51B42125EAB5003AD727 /* csmRectF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13CB518E2125EAB4003AD727 /* csmRectF.cpp */; };
 		13CB51B72125ED35003AD727 /* LAppAllocator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51B62125ED35003AD727 /* LAppAllocator.mm */; };
 		13CB51BA2125EE9E003AD727 /* LAppPal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51B92125EE9E003AD727 /* LAppPal.mm */; };
+		13CB51BD2125F13D003AD727 /* LAppModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13CB51BC2125F13D003AD727 /* LAppModel.mm */; };
+		13CB52172125F3DD003AD727 /* LAppTextureManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13CB52162125F3DD003AD727 /* LAppTextureManager.mm */; };
+		13CB521921264C96003AD727 /* model in Resources */ = {isa = PBXBuildFile; fileRef = 13CB521821264C95003AD727 /* model */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +153,11 @@
 		13CB51B62125ED35003AD727 /* LAppAllocator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAppAllocator.mm; sourceTree = "<group>"; };
 		13CB51B82125EE9E003AD727 /* LAppPal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAppPal.h; sourceTree = "<group>"; };
 		13CB51B92125EE9E003AD727 /* LAppPal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAppPal.mm; sourceTree = "<group>"; };
+		13CB51BB2125F13D003AD727 /* LAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAppModel.h; sourceTree = "<group>"; };
+		13CB51BC2125F13D003AD727 /* LAppModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAppModel.mm; sourceTree = "<group>"; };
+		13CB52152125F3DD003AD727 /* LAppTextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAppTextureManager.h; sourceTree = "<group>"; };
+		13CB52162125F3DD003AD727 /* LAppTextureManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LAppTextureManager.mm; sourceTree = "<group>"; };
+		13CB521821264C95003AD727 /* model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = model; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +177,7 @@
 		13CB50EF2125E8B6003AD727 = {
 			isa = PBXGroup;
 			children = (
+				13CB521821264C95003AD727 /* model */,
 				13CB51382125EA99003AD727 /* Framework */,
 				13CB50FA2125E8B6003AD727 /* Cubism3-ARKit */,
 				13CB50F92125E8B6003AD727 /* Products */,
@@ -195,6 +204,10 @@
 				13CB51B62125ED35003AD727 /* LAppAllocator.mm */,
 				13CB51B82125EE9E003AD727 /* LAppPal.h */,
 				13CB51B92125EE9E003AD727 /* LAppPal.mm */,
+				13CB51BB2125F13D003AD727 /* LAppModel.h */,
+				13CB51BC2125F13D003AD727 /* LAppModel.mm */,
+				13CB52152125F3DD003AD727 /* LAppTextureManager.h */,
+				13CB52162125F3DD003AD727 /* LAppTextureManager.mm */,
 				13CB51042125E8B8003AD727 /* Assets.xcassets */,
 				13CB51062125E8B8003AD727 /* LaunchScreen.storyboard */,
 				13CB51092125E8B8003AD727 /* Info.plist */,
@@ -445,6 +458,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13CB521921264C96003AD727 /* model in Resources */,
 				13CB51082125E8B8003AD727 /* LaunchScreen.storyboard in Resources */,
 				13CB51052125E8B8003AD727 /* Assets.xcassets in Resources */,
 			);
@@ -463,12 +477,14 @@
 				13CB519C2125EAB5003AD727 /* CubismExpressionMotion.cpp in Sources */,
 				13CB51002125E8B6003AD727 /* ViewController.mm in Sources */,
 				13CB510B2125E8B8003AD727 /* main.m in Sources */,
+				13CB52172125F3DD003AD727 /* LAppTextureManager.mm in Sources */,
 				13CB51AB2125EAB5003AD727 /* CubismUserModel.cpp in Sources */,
 				13CB519A2125EAB5003AD727 /* CubismMotionManager.cpp in Sources */,
 				13CB51982125EAB5003AD727 /* ACubismMotion.cpp in Sources */,
 				13CB519B2125EAB5003AD727 /* CubismMotionQueueManager.cpp in Sources */,
 				13CB51962125EAB5003AD727 /* CubismMath.cpp in Sources */,
 				13CB51932125EAB5003AD727 /* CubismViewMatrix.cpp in Sources */,
+				13CB51BD2125F13D003AD727 /* LAppModel.mm in Sources */,
 				13CB51A62125EAB5003AD727 /* CubismBreath.cpp in Sources */,
 				13CB519D2125EAB5003AD727 /* CubismMotionJson.cpp in Sources */,
 				13CB519E2125EAB5003AD727 /* CubismMotionQueueEntry.cpp in Sources */,

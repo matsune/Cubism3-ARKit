@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GLKit/GLKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : GLKViewController <GLKViewDelegate>
 
+@property (nonatomic, assign) bool mOpenGLRun;
+@property (nonatomic) GLuint vertexBufferId;
+@property (nonatomic) GLuint fragmentBufferId;
+@property (nonatomic) GLuint programId;
+
+- (void)initModel;
 
 @end
 
