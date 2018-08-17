@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
+#import <ARKit/ARKit.h>
 
-@interface ViewController : GLKViewController <GLKViewDelegate>
+@interface ViewController : GLKViewController <GLKViewDelegate, ARSessionDelegate>
 
 @property (nonatomic, assign) bool mOpenGLRun;
 @property (nonatomic) GLuint vertexBufferId;
