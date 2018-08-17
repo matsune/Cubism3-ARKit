@@ -42,7 +42,8 @@ using namespace Csm;
 @property (nonatomic) const CubismId *bodyAngleX;
 @property (nonatomic) const CubismId *bodyAngleY;
 @property (nonatomic) const CubismId *bodyAngleZ;
-
+@property (nonatomic) const CubismId *bustX;
+@property (nonatomic) const CubismId *bustY;
 @end
 
 @implementation ViewController
@@ -85,6 +86,8 @@ static const GLfloat uv[] =
     self.bodyAngleX = manager->GetId(DefaultParameterId::ParamBodyAngleX);
     self.bodyAngleY = manager->GetId(DefaultParameterId::ParamBodyAngleY);
     self.bodyAngleZ = manager->GetId(DefaultParameterId::ParamBodyAngleZ);
+    self.bustX = manager->GetId(DefaultParameterId::ParamBustX);
+    self.bustY = manager->GetId(DefaultParameterId::ParamBustY);
 }
 
 - (void)viewDidLoad {
@@ -160,7 +163,8 @@ static const GLfloat uv[] =
         int height = rect.size.height;
         Csm::CubismMatrix44 projection;
         projection.Scale(1.0f, static_cast<float>(width) / static_cast<float>(height));
-        projection.ScaleRelative(4.0, 4.0);
+        projection.ScaleRelative(8.0, 8.0);
+        projection.TranslateY(-0.8);
         self.model->Draw(projection);
     }
 }
@@ -194,6 +198,9 @@ static const GLfloat uv[] =
         self.model->GetModel()->SetParameterValue(self.bodyAngleX, -yaw * 10);
         self.model->GetModel()->SetParameterValue(self.bodyAngleY, (roll + 0.4) * 2 * 10);
         self.model->GetModel()->SetParameterValue(self.bodyAngleZ, pitch * 10);
+        
+        self.model->GetModel()->SetParameterValue(self.bustX, -yaw);
+        self.model->GetModel()->SetParameterValue(self.bustY, (roll + 0.4) * 2);
     }
     
     { // eyeball
