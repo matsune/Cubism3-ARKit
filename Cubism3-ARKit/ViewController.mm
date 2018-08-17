@@ -36,6 +36,10 @@ using namespace Csm;
 @property (nonatomic) const CubismId *browLAngle;
 @property (nonatomic) const CubismId *browRAngle;
 
+@property (nonatomic) const CubismId *angleX;
+@property (nonatomic) const CubismId *angleY;
+@property (nonatomic) const CubismId *angleZ;
+
 @end
 
 @implementation ViewController
@@ -72,6 +76,9 @@ static const GLfloat uv[] =
     self.browRY = manager->GetId(DefaultParameterId::ParamBrowRY);
     self.browLAngle = manager->GetId(DefaultParameterId::ParamBrowLAngle);
     self.browRAngle = manager->GetId(DefaultParameterId::ParamBrowRAngle);
+    self.angleX = manager->GetId(DefaultParameterId::ParamAngleX);
+    self.angleY = manager->GetId(DefaultParameterId::ParamAngleY);
+    self.angleZ = manager->GetId(DefaultParameterId::ParamAngleZ);
 }
 
 - (void)viewDidLoad {
@@ -168,6 +175,17 @@ static const GLfloat uv[] =
 
 - (void)renderer:(id<SCNSceneRenderer>)renderer didUpdateNode:(SCNNode *)node forAnchor:(ARAnchor *)anchor {
     ARFaceAnchor *faceAnchor = (ARFaceAnchor*)anchor;
+    
+    { // face angle
+        float yaw = atan2(-faceAnchor.transform.columns[2][0], faceAnchor.transform.columns[0][0]);
+        float roll = atan2(-faceAnchor.transform.columns[1][2], faceAnchor.transform.columns[1][1]);
+        float pitch = asin(faceAnchor.transform.columns[1][0]);
+        
+        self.model->GetModel()->SetParameterValue(self.angleX, -yaw * 40);
+        self.model->GetModel()->SetParameterValue(self.angleY, (roll + 0.4) * 2 *30);
+        self.model->GetModel()->SetParameterValue(self.angleZ, pitch * 40);
+    }
+    
     { // eyeball
         CGFloat lookUpL = [faceAnchor.blendShapes[ARBlendShapeLocationEyeLookUpLeft] floatValue];
         CGFloat lookDownL = [faceAnchor.blendShapes[ARBlendShapeLocationEyeLookDownLeft] floatValue];
