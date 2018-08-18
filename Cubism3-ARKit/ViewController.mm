@@ -9,7 +9,6 @@
 #import <ARKit/ARKit.h>
 
 #import "ViewController.h"
-#import "LAppModel.h"
 #import "LAppPal.h"
 #import "CubismDefaultParameterId.hpp"
 #import "CubismIdManager.hpp"
