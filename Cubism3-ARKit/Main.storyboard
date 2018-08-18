@@ -63,7 +63,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Eeg-zV-d37">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Eeg-zV-d37">
                             <size key="itemSize" width="50" height="70"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -78,9 +78,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQX-G0-FeY">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+                                            <rect key="frame" x="0.0" y="5" width="50" height="65"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uzp-H7-nz4">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="65"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aH7-wN-Vfi">
@@ -90,7 +90,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPe-Mj-foN">
-                                                        <rect key="frame" x="0.0" y="40" width="50" height="30"/>
+                                                        <rect key="frame" x="0.0" y="40" width="50" height="25"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -114,7 +114,7 @@
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="UQX-G0-FeY" secondAttribute="bottom" id="Aj3-CD-6Rv"/>
-                                    <constraint firstItem="UQX-G0-FeY" firstAttribute="top" secondItem="b7o-AC-7ur" secondAttribute="top" id="YqQ-xc-JQ5"/>
+                                    <constraint firstItem="UQX-G0-FeY" firstAttribute="top" secondItem="b7o-AC-7ur" secondAttribute="top" constant="5" id="YqQ-xc-JQ5"/>
                                     <constraint firstAttribute="trailing" secondItem="UQX-G0-FeY" secondAttribute="trailing" id="flg-0m-OWI"/>
                                     <constraint firstItem="UQX-G0-FeY" firstAttribute="leading" secondItem="b7o-AC-7ur" secondAttribute="leading" id="tMI-A0-ntm"/>
                                 </constraints>
