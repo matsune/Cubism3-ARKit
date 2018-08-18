@@ -214,15 +214,15 @@
 		13CB50FA2125E8B6003AD727 /* Cubism3-ARKit */ = {
 			isa = PBXGroup;
 			children = (
+				130D358321280235003EEE91 /* Cubism3-ARKit-Bridging-Header.h */,
+				13CB51092125E8B8003AD727 /* Info.plist */,
+				1303387121270A4D00EEEDB4 /* Main.storyboard */,
+				130D3586212809CC003EEE91 /* AppDelegate.swift */,
+				130D358421280236003EEE91 /* MainViewController.swift */,
 				13CB51042125E8B8003AD727 /* Assets.xcassets */,
 				13CB522221267C1E003AD727 /* binding */,
-				13CB51092125E8B8003AD727 /* Info.plist */,
 				13CB51062125E8B8003AD727 /* LaunchScreen.storyboard */,
-				1303387121270A4D00EEEDB4 /* Main.storyboard */,
 				130D711E2127A36B00702BD5 /* menu */,
-				130D358421280236003EEE91 /* MainViewController.swift */,
-				130D358321280235003EEE91 /* Cubism3-ARKit-Bridging-Header.h */,
-				130D3586212809CC003EEE91 /* AppDelegate.swift */,
 			);
 			path = "Cubism3-ARKit";
 			sourceTree = "<group>";
@@ -415,18 +415,18 @@
 		13CB522221267C1E003AD727 /* binding */ = {
 			isa = PBXGroup;
 			children = (
+				130D358821280BF7003EEE91 /* Cubism3Allocator.h */,
+				130D358921280C09003EEE91 /* Cubism3Allocator.mm */,
+				130D71212127A4FF00702BD5 /* Cubism3Model.h */,
+				130D711F2127A4F600702BD5 /* Cubism3Model.mm */,
+				130D358B2128118E003EEE91 /* Cubism3Timer.h */,
+				130D358C212811C1003EEE91 /* Cubism3Timer.m */,
 				13CB51B52125ED35003AD727 /* LAppAllocator.h */,
 				13CB51B62125ED35003AD727 /* LAppAllocator.mm */,
 				13CB51B82125EE9E003AD727 /* LAppPal.h */,
 				13CB51B92125EE9E003AD727 /* LAppPal.mm */,
 				13CB52152125F3DD003AD727 /* LAppTextureManager.h */,
 				13CB52162125F3DD003AD727 /* LAppTextureManager.mm */,
-				130D711F2127A4F600702BD5 /* Cubism3Model.mm */,
-				130D71212127A4FF00702BD5 /* Cubism3Model.h */,
-				130D358821280BF7003EEE91 /* Cubism3Allocator.h */,
-				130D358921280C09003EEE91 /* Cubism3Allocator.mm */,
-				130D358B2128118E003EEE91 /* Cubism3Timer.h */,
-				130D358C212811C1003EEE91 /* Cubism3Timer.m */,
 			);
 			path = binding;
 			sourceTree = "<group>";
