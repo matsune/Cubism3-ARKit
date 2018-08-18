@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright(c) Live2D Inc. All rights reserved.
  *
  * Use of this source code is governed by the Live2D Open Software license
@@ -152,7 +152,7 @@ public:
     /**
      * @brief   C言語文字列としてのポインタを取得する
      *
-     * @brief   C言語文字列のポインタ
+     * @return   C言語文字列のポインタ
      */
     const csmChar* GetRawString() const;
 

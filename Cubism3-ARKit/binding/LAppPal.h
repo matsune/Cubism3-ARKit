@@ -42,19 +42,6 @@ public:
     static void ReleaseBytes(Csm::csmByte* byteData);
     
     /**
-     * @biref   デルタ時間（前回フレームとの差分）を取得する
-     *
-     * @return  デルタ時間[ms]
-     *
-     */
-    static double GetDeltaTime() {return s_deltaTime;}
-    
-    /**
-     * @brief 時間を更新する。
-     */
-    static void UpdateTime();
-    
-    /**
      * @brief ログを出力する
      *
      * ログを出力する
@@ -74,11 +61,6 @@ public:
      *
      */
     static void PrintMessage(const Csm::csmChar* message);
-    
-private:
-    static double s_currentFrame;
-    static double s_lastFrame;
-    static double s_deltaTime;
 };
 
 #endif /* LAppPal_h */

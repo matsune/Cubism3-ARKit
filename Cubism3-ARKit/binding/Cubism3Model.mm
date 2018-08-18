@@ -22,6 +22,7 @@
 #import "Cubism3Model.h"
 #import "LAppTextureManager.h"
 #import "LAppPal.h"
+#import "Cubism3Timer.h"
 
 using namespace Live2D::Cubism::Framework;
 
@@ -252,17 +253,17 @@ using namespace Live2D::Cubism::Framework;
     return dynamic_cast<Rendering::CubismRenderer_OpenGLES2*>(_renderer);
 }
 
-- (void)scaleX:(CGFloat)x Y:(CGFloat)y
+- (void)scale:(CGFloat)x Y:(CGFloat)y
 {
     _drawMatrix->Scale(x, y);
 }
 
-- (void)scaleRelativeX:(CGFloat)x Y:(CGFloat)y
+- (void)scaleRelative:(CGFloat)x Y:(CGFloat)y
 {
     _drawMatrix->ScaleRelative(x, y);
 }
 
-- (void)translateX:(CGFloat)x Y:(CGFloat)y
+- (void)translate:(CGFloat)x Y:(CGFloat)y
 {
     _drawMatrix->Translate(x, y);
 }
@@ -279,7 +280,7 @@ using namespace Live2D::Cubism::Framework;
 
 - (void)update
 {
-    const csmFloat32 deltaTimeSeconds = LAppPal::GetDeltaTime();
+    const csmFloat32 deltaTimeSeconds = [Cubism3Timer getDeltaTime];
     _userTimeSeconds += deltaTimeSeconds;
     
     if (_breath != NULL) {

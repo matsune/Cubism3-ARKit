@@ -42,9 +42,9 @@ typedef NS_ENUM(NSInteger, DefaultParamId) {
 - (void)releaseModel;
 - (void)loadAssets:(NSString *)dir FileName:(NSString *)fileName;
 - (void)setParameter:(DefaultParamId)paramId Value:(float)value;
-- (void)scaleX:(CGFloat)x Y:(CGFloat)y;
-- (void)scaleRelativeX:(CGFloat)x Y:(CGFloat)y;
-- (void)translateX:(CGFloat)x Y:(CGFloat)y;
+- (void)scale:(CGFloat)x Y:(CGFloat)y;
+- (void)scaleRelative:(CGFloat)x Y:(CGFloat)y;
+- (void)translate:(CGFloat)x Y:(CGFloat)y;
 - (void)translateX:(CGFloat)x;
 - (void)translateY:(CGFloat)y;
 - (void)update;
