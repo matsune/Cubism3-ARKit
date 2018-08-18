@@ -39,11 +39,21 @@ final class MainViewController: GLKViewController {
         }
     }
     
+    private enum Avatar: String {
+        case Haru, Hiyori
+    }
+    
     private var model: Cubism3Model?
+    private var avatar: Avatar = .Haru
     
     public func setupCubism() {
         model = Cubism3Model()
-        model?.loadAssets("model/Haru/", fileName: "Haru.model3.json")
+        loadAvatar(.Haru)
+    }
+    
+    private func loadAvatar(_ avatar: Avatar) {
+        self.avatar = avatar
+        model?.loadAssets("model/\(avatar.rawValue)/", fileName: "\(avatar.rawValue).model3.json")
     }
     
     override func viewDidLoad() {
@@ -134,7 +144,12 @@ final class MainViewController: GLKViewController {
             
             model?.scale(1.0, y: rect.size.width / rect.size.height)
             model?.scaleRelative(4.0, y: 4.0)
-            model?.translateY(-0.8)
+            if avatar == .Haru {
+                model?.translateY(-0.8)
+            } else {
+                model?.translateY(-0.4)
+            }
+            
             model?.draw()
         }
     }
@@ -225,5 +240,13 @@ extension MainViewController: MenuViewControllerDelegate {
     
     func didChange(isHiddenFace: Bool) {
         self.isHiddenFace = isHiddenFace
+    }
+    
+    func didSelctChangeAvatar() {
+        if avatar == .Haru {
+            loadAvatar(.Hiyori)
+        } else {
+            loadAvatar(.Haru)
+        }
     }
 }

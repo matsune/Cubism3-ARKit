@@ -17,6 +17,7 @@ struct MenuItem {
 protocol MenuViewControllerDelegate: class {
     func didSelectRestart()
     func didChange(isHiddenFace: Bool)
+    func didSelctChangeAvatar()
 }
 
 final class MenuViewController: UICollectionViewController {
@@ -25,7 +26,8 @@ final class MenuViewController: UICollectionViewController {
     public weak var delegate: MenuViewControllerDelegate?
     
     private let items: [MenuItem] = [MenuItem(title: "Restart", image: #imageLiteral(resourceName: "restart")),
-                                     MenuItem(title: "Face", image: #imageLiteral(resourceName: "none"))]
+                                     MenuItem(title: "Face", image: #imageLiteral(resourceName: "none")),
+                                     MenuItem(title: "Change", image: #imageLiteral(resourceName: "avatar"))]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,8 +61,10 @@ final class MenuViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             delegate?.didSelectRestart()
-        } else {
+        } else if indexPath.row == 1 {
             delegate?.didChange(isHiddenFace: !isHiddenFace)
+        } else {
+            delegate?.didSelctChangeAvatar()
         }
         dismiss(animated: true, completion: nil)
     }
